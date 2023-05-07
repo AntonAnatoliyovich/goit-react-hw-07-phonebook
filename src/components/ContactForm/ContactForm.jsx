@@ -21,7 +21,7 @@ export const ContactForm = () => {
 
 	return (
 		<Formik className={css.card} initialValues={initialValues} onSubmit={submitForm}>
-			<Form className={css.form}>
+			<Form>
 				<label className={css.label} htmlFor="name-id">
 					Name
 					<Field
