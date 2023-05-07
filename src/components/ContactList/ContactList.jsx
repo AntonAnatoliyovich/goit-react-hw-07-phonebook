@@ -10,15 +10,15 @@ export const ContactList = ({ filteredContacts }) => {
 		<>
 			{
 				filteredContacts.length === 0
-				? <p>Contact not found</p>
+				? <p className={css.contact__text}>Contact not found</p>
 				: <ul className={css.contacts__list}>
 					{filteredContacts.map(({ name, id, number }) =>
-						<li className={css.contact} key={id}>
-							<span>{name}: {number}</span>
+						<li className={css.contact__item} key={id}>
+							<span className={css.contact__text}>{name}: {number}</span>
 							<button
 								id={id}
 								onClick={() => dispatch(removeContact(id))}
-								className={css.removeBtn}
+								className={css.contact__button}
 								type="button">
 								Delete
 							</button>

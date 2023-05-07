@@ -26,8 +26,8 @@ export const Phonebook = () => {
 					<>
 						<h2 className={css.phonebook__title}>Contacts</h2>
 						<Filter />
-						{isLoading && <p>Is Loading...</p>}
-						{error && <p>error</p>}
+						{isLoading && <p className={css.contact__text}>Is Loading...</p>}
+						{error && <p className={css.contact__text}>error</p>}
 						<ContactList filteredContacts={filteredContacts} />
 					</>
 				}
